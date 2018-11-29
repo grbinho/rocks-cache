@@ -8,6 +8,7 @@ import org.apache.avro.ipc.specific.SpecificRequestor
 import org.rockscache.avro.proto.{CacheStore, KeyValuePair}
 
 import scala.util.{Failure, Random, Success, Try}
+import scala.collection.JavaConverters._
 
 object RocksCacheTestClient extends App {
 
@@ -34,16 +35,19 @@ object RocksCacheTestClient extends App {
     val start = System.currentTimeMillis()
 
     while(OffsetDateTime.now(ZoneOffset.UTC).isBefore(endTime)) {
-      val r = Random.nextInt().toString
-      val keyValuePair = new KeyValuePair()
-      keyValuePair.setKey(ByteBuffer.wrap(r.getBytes))
-      keyValuePair.setValue(StandardCharsets.UTF_8.encode("x"))
 
-      val response = Try { cacheStoreProxy.checkAndStore(keyValuePair) }
+      val keyValuePairBatch = for (i <- 1 to 1000) yield {
+        val r = Random.nextInt().toString
+        val kv = new KeyValuePair()
+        kv.setKey(ByteBuffer.wrap(r.getBytes))
+        kv.setValue(StandardCharsets.UTF_8.encode("x"))
+        kv
+      }
+
+      val response = Try { cacheStoreProxy.checkAndStoreBatch(keyValuePairBatch.toList.asJava) }
 
       response match {
-        case Success(false) => duplicateCount += 1
-        case Success(true) => Unit
+        case Success(result) => result.getPayload.asScala.filter(_ == false).foreach(_ => duplicateCount += 1)
         case Failure(_) => errorCount += 1
       }
 
@@ -53,9 +57,13 @@ object RocksCacheTestClient extends App {
     val end = System.currentTimeMillis()
 
     println(s"[RunId=${runId}] Total requests: ${requestsSent}")
+    println(s"[RunId=${runId}] Total records: ${requestsSent * 1000}")
     println(s"[RunId=${runId}] Total errors: ${errorCount}")
-    println(s"[RunId=${runId}] Ratio of duplicates: ${duplicateCount/requestsSent.toDouble}")
+    println(s"[RunId=${runId}] Ratio of duplicates: ${duplicateCount/(requestsSent.toDouble * 1000)}")
     println(s"[RunId=${runId}] Total duration: ${end - start} ms")
     println(s"[RunId=${runId}] Avg request duration: ${(end - start)/requestsSent.toDouble}")
+    println(s"[RunId=${runId}] Avg request duration pre record: ${(end - start)/(requestsSent.toDouble * 1000)}")
+
+   client.close(true)
   }
 }

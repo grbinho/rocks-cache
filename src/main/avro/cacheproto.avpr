@@ -1,7 +1,7 @@
 {
   "namespace": "org.rockscache.avro.proto",
   "protocol": "CacheStore",
-  "types":[
+  "types": [
     {
       "name": "KeyValuePair",
       "type": "record",
@@ -9,12 +9,23 @@
         {"name":"key", "type": "bytes"},
         {"name":"value", "type": ["null", "bytes"]}
       ]
+    },
+    {
+      "name": "KeyValuePairBatchResponse",
+      "type": "record",
+      "fields": [
+        {"name": "payload", "type": {"type": "array", "items": "boolean"}}
+      ]
     }
   ],
   "messages":{
     "checkAndStore": {
       "request": [{"name": "keyValuePair", "type": "KeyValuePair"}],
       "response": "boolean"
+    },
+    "checkAndStoreBatch": {
+      "request": [{"name": "keyValuePairArray", "type": { "type": "array", "items": "KeyValuePair" }}],
+      "response": "KeyValuePairBatchResponse"
     }
   }
 }

@@ -1,10 +1,13 @@
 package org.rockscache
 
+import java.util
+
 import com.typesafe.scalalogging.LazyLogging
 import org.rockscache.avro.proto.CacheStore
 import org.rocksdb._
 
 import scala.util.{Failure, Success, Try}
+import scala.collection.JavaConverters._
 
 /*
 * If we use it both locally and remote, we can use it as a local cache and remote store???
@@ -65,14 +68,12 @@ class CacheStoreImpl extends CacheStore {
     .setStatistics(statisticsObject)
 
   val dbPath = "/tmp/rocks-cache/ttldb"
-  val ttl: Int = 60 //Gone in 60 seconds
+  val ttl: Int = 7 * 24 * 60 * 60 //7 days of retention
   val readonly = false
 
   val db = TtlDB.open(options, dbPath, ttl, readonly)
 
-  /**
-    */
-  override def checkAndStore(keyValuePair: KeyValuePair): Boolean = {
+  private def _checkAndStore(keyValuePair: KeyValuePair): Boolean = {
     val value = db.get(keyValuePair.getKey.array)
     value match {
       case null =>
@@ -80,6 +81,21 @@ class CacheStoreImpl extends CacheStore {
         true
       case _ => false
     }
+  }
+
+  /**
+    */
+  override def checkAndStore(keyValuePair: KeyValuePair): Boolean = {
+    _checkAndStore(keyValuePair)
+  }
+
+  /**
+    */
+  override def checkAndStoreBatch(keyValuePairArray: util.List[KeyValuePair]): KeyValuePairBatchResponse = {
+    //Foreach item in the batch checkAndStore
+    val result = keyValuePairArray.asScala.map(_checkAndStore).map(Boolean.box).toList.asJava
+    val response = new KeyValuePairBatchResponse(result)
+    response
   }
 }
 
