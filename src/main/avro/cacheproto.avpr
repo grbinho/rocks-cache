@@ -1,0 +1,20 @@
+{
+  "namespace": "org.rockscache.avro.proto",
+  "protocol": "CacheStore",
+  "types":[
+    {
+      "name": "KeyValuePair",
+      "type": "record",
+      "fields": [
+        {"name":"key", "type": "bytes"},
+        {"name":"value", "type": ["null", "bytes"]}
+      ]
+    }
+  ],
+  "messages":{
+    "checkAndStore": {
+      "request": [{"name": "keyValuePair", "type": "KeyValuePair"}],
+      "response": "boolean"
+    }
+  }
+}
