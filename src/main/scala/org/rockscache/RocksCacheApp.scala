@@ -83,16 +83,11 @@ class CacheStoreImpl extends CacheStore {
     }
   }
 
-  /**
-    */
   override def checkAndStore(keyValuePair: KeyValuePair): Boolean = {
     _checkAndStore(keyValuePair)
   }
 
-  /**
-    */
   override def checkAndStoreBatch(keyValuePairArray: util.List[KeyValuePair]): KeyValuePairBatchResponse = {
-    //Foreach item in the batch checkAndStore
     val result = keyValuePairArray.asScala.map(_checkAndStore).map(Boolean.box).toList.asJava
     val response = new KeyValuePairBatchResponse(result)
     response
@@ -100,9 +95,7 @@ class CacheStoreImpl extends CacheStore {
 }
 
 
-
 object RocksCacheApp extends App with LazyLogging {
-
   Try {
     logger.info("Starting service")
     val service = AvroRpcService.createService()
@@ -114,62 +107,4 @@ object RocksCacheApp extends App with LazyLogging {
     case Failure(exception) => logger.error("Error occurred", exception)
     case Success(_) => logger.info("Exited")
   }
-
-
-
-
-//  private def getBytesUTF8(value: String): Array[Byte] = StandardCharsets.UTF_8.encode(value).array
-//  private def getStringUTF8(value: Array[Byte]) = StandardCharsets.UTF_8.decode(ByteBuffer.wrap(value)).toString
-//
-//  val statisticsObject = new Statistics()
-//
-//  val options = new Options()
-//    .setCreateIfMissing(true)
-//    .setCompressionType(CompressionType.LZ4_COMPRESSION)
-//    .setCompactionStyle(CompactionStyle.LEVEL)
-//    .setStatistics(statisticsObject)
-//
-//  val dbPath = "/tmp/rocks-cache/ttldb"
-//  val ttl: Int = 60 //Gone in 60 seconds
-//  val readonly = false
-//
-//  val db = TtlDB.open(options, dbPath, ttl, readonly)
-
-//  val getStats: Endpoint[IO, String] = get("stats") {
-//    val dbGetHistogram = statisticsObject.getHistogramString(HistogramType.DB_GET)
-//    Ok(dbGetHistogram)
-//  }
-//
-//  final val postValue: Endpoint[IO, KeyValue] = post("values" :: jsonBody[KeyValue]) { t: KeyValue =>
-//    db.put(getBytesUTF8(t.key), getBytesUTF8(t.value))
-//    println(t)
-//    Ok(t)
-//  }
-//
-//  final val getValue: Endpoint[IO, String] = get("values" :: path[String]) { key: String =>
-//    val value = db.get(getBytesUTF8(key))
-//    value match {
-//      case null => NotFound(new Exception("Key not found"))
-//      case _ => Ok(getStringUTF8(value))
-//    }
-//  }
-//
-//  final val checkAndPut: Endpoint[IO, String] = post("values" :: "check-and-put" :: jsonBody[KeyValue]) { t: KeyValue =>
-//    //Check if key is there, if yes, return 409 (conflict)
-//    val value = db.get(getBytesUTF8(t.key))
-//    value match {
-//      case null =>
-//        db.put(getBytesUTF8(t.key), getBytesUTF8(t.value))
-//        Output.empty(Status.Ok)
-//      case _ =>
-//        Output.empty(Status.Conflict)
-//    }
-//  }
-//
-//  //final val getMultiValues: Endpoint[IO, String]
-//
-//  val service: Service[Request, Response] = Bootstrap
-//    .serve[Application.Json](getStats :+: postValue :+: getValue :+: checkAndPut).toService
-//
-//  Await.ready(Http.server.serve(":8080", service))
 }
