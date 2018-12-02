@@ -65,6 +65,10 @@ class CacheStoreImpl extends CacheStore with LazyLogging {
   //TODO: Get available system memory. Give some memory to the JVM for service, assign some percentage to block cache
   //TODO: Use CLOCK cache
 
+  //TODO: Expose statistics
+  //TODO: Tune level0 size to be equal to level1 (read tuning guide)
+  //TODO: Limit JVM memory usage. Memory is used by the native process.
+
   val maxMemoryForJVM = Runtime.getRuntime.maxMemory
 
   import com.sun.management.OperatingSystemMXBean
