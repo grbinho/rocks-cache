@@ -1,13 +1,15 @@
 package org.rockscache
 
+import java.lang.management.ManagementFactory
+import java.nio.file.{Files, Paths}
 import java.util
 
 import com.typesafe.scalalogging.LazyLogging
 import org.rockscache.avro.proto.CacheStore
 import org.rocksdb._
 
-import scala.util.{Failure, Success, Try}
 import scala.collection.JavaConverters._
+import scala.util.{Failure, Success, Try}
 
 /*
 * If we use it both locally and remote, we can use it as a local cache and remote store???
@@ -49,25 +51,59 @@ import org.apache.avro.ipc.{NettyServer, Server}
 import org.rockscache.avro.proto._
 
 object AvroRpcService {
-
   def createService(): Server = {
     new NettyServer(new SpecificResponder(classOf[CacheStore], new CacheStoreImpl), new InetSocketAddress(65111))
   }
 }
 
-class CacheStoreImpl extends CacheStore {
+class CacheStoreImpl extends CacheStore with LazyLogging {
 
   RocksDB.loadLibrary()
 
   val statisticsObject = new Statistics()
 
+  //TODO: Get available system memory. Give some memory to the JVM for service, assign some percentage to block cache
+  //TODO: Use CLOCK cache
+
+  val maxMemoryForJVM = Runtime.getRuntime.maxMemory
+
+  import com.sun.management.OperatingSystemMXBean
+
+  val osBean = ManagementFactory.getPlatformMXBean(classOf[OperatingSystemMXBean])
+  val totalSystemMemory = osBean.getTotalPhysicalMemorySize
+  val cpuCount = Runtime.getRuntime.availableProcessors
+
+  logger.info(s"Total system memory: ${totalSystemMemory} bytes")
+  logger.info(s"Memory reserved by the JVM: ${maxMemoryForJVM} bytes")
+
+  val blockBasedTableConfig = new BlockBasedTableConfig()
+  val blockCacheSize = totalSystemMemory / 2 - maxMemoryForJVM
+
+  logger.info(s"Block cache size: ${blockCacheSize} bytes")
+
+  val clockCache = new ClockCache(blockCacheSize)
+  blockBasedTableConfig.setBlockCache(clockCache)
+
   val options = new Options()
     .setCreateIfMissing(true)
+    .setIncreaseParallelism(cpuCount) //Sets low threads to "totalThreads", highs stays at 1
+    .setCompressionPerLevel(List(
+        CompressionType.NO_COMPRESSION, //Do not compress first two levels of data
+        CompressionType.NO_COMPRESSION,
+        CompressionType.LZ4_COMPRESSION,
+        CompressionType.LZ4_COMPRESSION,
+        CompressionType.LZ4_COMPRESSION,
+        CompressionType.LZ4_COMPRESSION,
+        CompressionType.LZ4_COMPRESSION).asJava)
     .setCompressionType(CompressionType.LZ4_COMPRESSION)
     .setCompactionStyle(CompactionStyle.LEVEL)
     .setStatistics(statisticsObject)
+    .setTableFormatConfig(blockBasedTableConfig)
 
   val dbPath = "/tmp/rocks-cache/ttldb"
+
+  Files.createDirectories(Paths.get(dbPath))
+
   val ttl: Int = 7 * 24 * 60 * 60 //7 days of retention
   val readonly = false
 
