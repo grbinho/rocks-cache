@@ -4,6 +4,7 @@ import java.nio.ByteBuffer
 import java.nio.charset.StandardCharsets
 import java.time.{OffsetDateTime, ZoneOffset}
 import java.util.concurrent.Executors
+import java.security.MessageDigest
 
 import org.apache.avro.ipc.specific.SpecificRequestor
 import org.rockscache.avro.proto.{CacheStore, KeyValuePair}
@@ -40,10 +41,11 @@ object RocksCacheTestClient extends App {
     while (OffsetDateTime.now(ZoneOffset.UTC).isBefore(endTime)) {
 
       val keyValuePairBatch = for (i <- 1 to batchSize) yield {
-        val r = Random.nextInt().toString
+        val r = Random.nextLong.toString
         val kv = new KeyValuePair()
-        kv.setKey(ByteBuffer.wrap(r.getBytes))
-        kv.setValue(StandardCharsets.UTF_8.encode("x"))
+        val key = MessageDigest.getInstance("SHA-256").digest(r.getBytes)
+        kv.setKey(ByteBuffer.wrap(key))
+        kv.setValue(StandardCharsets.UTF_8.encode(r))
         kv
       }
 

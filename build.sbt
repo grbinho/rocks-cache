@@ -1,6 +1,6 @@
 name := "rocks-cache"
 
-version := "0.5"
+version := "0.7"
 
 scalaVersion := "2.12.7"
 

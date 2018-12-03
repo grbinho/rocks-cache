@@ -1,0 +1,22 @@
+20:18:13.568 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+20:18:13.570 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+20:18:13.586 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x054cda6b] OPEN
+20:18:13.596 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x054cda6b, /172.31.28.4:59836 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:59836
+20:18:13.596 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x054cda6b, /172.31.28.4:59836 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+[RunId=-7471681713852987083] Running for 30 minutes against ec2-34-240-194-179.eu-west-1.compute.amazonaws.com
+20:48:13.791 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+20:48:13.793 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x054cda6b, /172.31.28.4:59836 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+20:48:13.793 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x054cda6b, /172.31.28.4:59836 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+20:48:13.793 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x054cda6b, /172.31.28.4:59836 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+20:48:13.793 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+RunTime: 30 min
+Number of clients: 1
+Total requests: 439146
+Total records: 43914600
+Total errors: 0
+Total duplicates: 223030
+Ratio of duplicates: 0.005078720972068515
+Duration: 1799999 ms
+Avg request duration: 4.098862337354775 ms
+Batch size: 100
+Records/sec: 24397.013553896417
