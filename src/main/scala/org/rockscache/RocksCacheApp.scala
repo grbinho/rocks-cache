@@ -69,6 +69,8 @@ class CacheStoreImpl extends CacheStore with LazyLogging {
   //TODO: Tune level0 size to be equal to level1 (read tuning guide)
   //TODO: Limit JVM memory usage. Memory is used by the native process.
 
+  //TODO: Expose management features over HTTP endpoint
+
   val maxMemoryForJVM = Runtime.getRuntime.maxMemory
 
   import com.sun.management.OperatingSystemMXBean
@@ -87,6 +89,8 @@ class CacheStoreImpl extends CacheStore with LazyLogging {
 
   val clockCache = new ClockCache(blockCacheSize)
   blockBasedTableConfig.setBlockCache(clockCache)
+
+  //TODO: Use settings file
 
   val options = new Options()
     .setCreateIfMissing(true)
@@ -123,14 +127,26 @@ class CacheStoreImpl extends CacheStore with LazyLogging {
     }
   }
 
+  private def _checkBatchIfNotExists(keyValuePair: Seq[KeyValuePair]): Seq[Boolean] =
+    keyValuePair.map (kvp => db.get(kvp.getKey.array) == null)
+
+  private def _writeBatch(keyValuePair: Seq[KeyValuePair]) = {
+    val batch = new WriteBatch()
+    val writeOptions = new WriteOptions()
+    keyValuePair.foreach(kvp => batch.put(kvp.getKey.array, kvp.getValue.array))
+    db.write(writeOptions, batch)
+  }
+
   override def checkAndStore(keyValuePair: KeyValuePair): Boolean = {
     _checkAndStore(keyValuePair)
   }
 
   override def checkAndStoreBatch(keyValuePairArray: util.List[KeyValuePair]): KeyValuePairBatchResponse = {
-    val result = keyValuePairArray.asScala.map(_checkAndStore).map(Boolean.box).toList.asJava
-    val response = new KeyValuePairBatchResponse(result)
-    response
+    val keyValuePair = keyValuePairArray.asScala
+    val keyValuePairsToWrite = keyValuePair.zip(_checkBatchIfNotExists(keyValuePair)).filter(_._2)
+    _writeBatch(keyValuePairsToWrite.map(_._1))
+    val writtenKeys = keyValuePairsToWrite.map(_._2).map(Boolean.box).toList.asJava
+    new KeyValuePairBatchResponse(writtenKeys)
   }
 }
 
