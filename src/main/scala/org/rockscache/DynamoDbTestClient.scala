@@ -2,34 +2,73 @@ package org.rockscache
 
 import java.nio.ByteBuffer
 import java.nio.charset.StandardCharsets
-import java.time.{OffsetDateTime, ZoneOffset}
-import java.util.concurrent.Executors
 import java.security.MessageDigest
+import java.time.{OffsetDateTime, ZoneOffset}
+import java.util.Base64
+import java.util.concurrent.Executors
 
-import org.apache.avro.ipc.specific.SpecificRequestor
-import org.rockscache.avro.proto.{CacheStore, KeyValuePair}
+import org.rockscache.avro.proto.{KeyValuePair, KeyValuePairBatchResponse}
+import software.amazon.awssdk.auth.credentials.EnvironmentVariableCredentialsProvider
+import software.amazon.awssdk.services.dynamodb._
+import software.amazon.awssdk.services.dynamodb.model._
 
-import scala.util.{Failure, Random, Success, Try}
 import scala.collection.JavaConverters._
 import scala.concurrent.duration._
 import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.util.{Failure, Random, Success, Try}
 
-object RocksCacheTestClient extends App {
+object DynamoDbTestClient extends App {
 
-  case class KeyValue(key: String, value: String)
+  lazy val dynamoDbClient = DynamoDbClient
+    .builder
+    .credentialsProvider(EnvironmentVariableCredentialsProvider.create)
+    .region(software.amazon.awssdk.regions.Region.EU_WEST_1)
+    .build
 
   case class RunResults(requestCount: Long, itemsCount: Long, errorCount: Long, duplicateCount: Long, totalDuration: Long)
 
-  private def runTest(host: String, runLength: Int, batchSize: Int): RunResults = {
+
+
+  def checkAndStoreBatch(tableName: String, batch: Seq[KeyValuePair]) = {
+    //Check if item is already in dynamoDb
+    //If it's not write it and return true
+    //If it is, return false
+
+    //Max batch size is 100. Split incoming batch into batches of 100
+    val dynamoBatches = batch.grouped(100).toList
+
+    val batchResponses = dynamoBatches.map { b =>
+      val batch = b.map(kv => (StandardCharsets.UTF_8.decode(Base64.getEncoder.encode(kv.getKey())).toString -> kv.getValue)).toMap
+      val timestamp = java.time.Instant.now.toEpochMilli
+      val data = KeysAndAttributes.builder.keys(batch.map(kv => Map("Key"-> AttributeValue.builder.s(kv._1).build).asJava).asJavaCollection).build
+      val batchData = Map(tableName -> data).asJava
+      val batchRequest = BatchGetItemRequest.builder.requestItems(batchData).build
+      val response = dynamoDbClient.batchGetItem(batchRequest)
+      val responseData = response.responses.get(tableName)
+      val responseKeys = responseData.asScala.map(r => r.values.asScala.map(v => v.s)).flatten
+      //Translate b -> key -> true/false. False if item was found, meaning write was not done for others, do a write
+      val keysToWrite = batch.map(kv => (kv._1, !responseKeys.exists(rk => rk == kv._1)))
+      keysToWrite
+    }.reduceLeft(_ ++ _)
+
+    //For each true, do a write
+    val keysToWrite = batchResponses.filter(kv => kv._2 == true).grouped(25).toList
+
+    keysToWrite.foreach{ k =>
+      val wr = k.map(kv => WriteRequest.builder.putRequest(PutRequest.builder.item(Map("Key" -> AttributeValue.builder.s(kv._1).build).asJava).build).build).asJavaCollection
+      val batchWriteRequest = BatchWriteItemRequest.builder.requestItems(Map(tableName -> wr).asJava).build
+      val writeResponse = dynamoDbClient.batchWriteItem(batchWriteRequest)
+    }
+
+    val response = new KeyValuePairBatchResponse(batchResponses.map(b => Boolean.box(b._2)).toList.asJava)
+    response
+  }
+
+
+  private def runTest(tableName: String, runLength: Int, batchSize: Int): RunResults = {
     val runId = Random.nextLong()
 
-    import java.net.InetSocketAddress
-
-    import org.apache.avro.ipc.NettyTransceiver
-    val client = new NettyTransceiver(new InetSocketAddress(host, 65111))
-    val cacheStoreProxy = SpecificRequestor.getClient[CacheStore](classOf[CacheStore], client)
-
-    println(s"[RunId=${runId}] Running for ${runLength} minutes against ${host}")
+    println(s"[RunId=${runId}] Running for ${runLength} minutes against ${tableName}")
 
     val endTime = OffsetDateTime.now(ZoneOffset.UTC).plusMinutes(runLength)
     var requestCount = 0L
@@ -50,7 +89,7 @@ object RocksCacheTestClient extends App {
       }
 
       val response = Try {
-        cacheStoreProxy.checkAndStoreBatch(keyValuePairBatch.toList.asJava)
+        checkAndStoreBatch(tableName, keyValuePairBatch)
       }
 
       response match {
@@ -63,17 +102,15 @@ object RocksCacheTestClient extends App {
 
     val end = System.currentTimeMillis()
 
-    client.close(true)
-
     RunResults(requestCount, requestCount * batchSize, errorCount, duplicateCount, end - start)
   }
 
   override def main(args: Array[String]) = {
 
     if(args.length < 4)
-      println("Usage:\n <host> <runLength:minutes> <batchSize> <numberOfClients>")
+      println("Usage:\n <tableName> <runLength:minutes> <batchSize> <numberOfClients>")
     else {
-      val host = args(0)
+      val tableName = args(0)
       val runLength = Integer.parseInt(args(1)) //minutes
       val batchSize = Integer.parseInt(args(2))
       val numberOfClients = Integer.parseInt(args(3))
@@ -84,7 +121,7 @@ object RocksCacheTestClient extends App {
       val tasks = for {
         i <- 1 to numberOfClients
       } yield Future {
-        runTest(host, runLength, batchSize)
+        runTest(tableName, runLength, batchSize)
       }
 
       val aggregated = Future.sequence(tasks)
@@ -110,6 +147,7 @@ object RocksCacheTestClient extends App {
       println(s"Batch size: ${batchSize}")
       println(s"Records/sec: ${(totalRecordCount) / (maxDuration/1000d)}")
 
+      dynamoDbClient.close()
       fixedThreadPool.shutdown()
     }
   }

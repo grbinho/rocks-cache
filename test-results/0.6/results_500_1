@@ -1,0 +1,22 @@
+14:01:39.714 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+14:01:39.716 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+14:01:39.731 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5ef8c1ca] OPEN
+14:01:39.741 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5ef8c1ca, /172.31.28.4:60148 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:60148
+14:01:39.741 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5ef8c1ca, /172.31.28.4:60148 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+[RunId=8528343002102337000] Running for 30 minutes against ec2-34-240-194-179.eu-west-1.compute.amazonaws.com
+14:31:39.928 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+14:31:39.930 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5ef8c1ca, /172.31.28.4:60148 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+14:31:39.930 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5ef8c1ca, /172.31.28.4:60148 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+14:31:39.930 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5ef8c1ca, /172.31.28.4:60148 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+14:31:39.930 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+RunTime: 30 min
+Number of clients: 1
+Total requests: 101138
+Total records: 50569000
+Total errors: 0
+Total duplicates: 296654
+Ratio of duplicates: 0.005866321264015504
+Duration: 1800005 ms
+Avg request duration: 17.79751428740928 ms
+Batch size: 500
+Records/sec: 28093.810850525413

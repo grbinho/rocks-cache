@@ -1,0 +1,187 @@
+19:03:15.206 [pool-1-thread-3] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.206 [pool-1-thread-7] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.207 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.206 [pool-1-thread-2] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.206 [pool-1-thread-13] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.209 [pool-1-thread-7] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.209 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.209 [pool-1-thread-11] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.210 [pool-1-thread-11] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.211 [pool-1-thread-10] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.211 [pool-1-thread-10] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.207 [pool-1-thread-5] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.207 [pool-1-thread-14] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.223 [pool-1-thread-5] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.207 [pool-1-thread-9] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.224 [pool-1-thread-14] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.207 [pool-1-thread-6] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.225 [pool-1-thread-9] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.207 [pool-1-thread-4] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.225 [pool-1-thread-6] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.207 [pool-1-thread-12] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.225 [pool-1-thread-4] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.209 [pool-1-thread-3] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.209 [pool-1-thread-2] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.226 [pool-1-thread-12] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.222 [pool-1-thread-13] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.226 [pool-1-thread-8] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.226 [pool-1-thread-8] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.227 [pool-1-thread-15] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.227 [pool-1-thread-15] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.228 [pool-1-thread-16] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+19:03:15.228 [pool-1-thread-16] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.242 [pool-1-thread-15] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x786147b8] OPEN
+19:03:15.242 [pool-1-thread-10] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x9b713f62] OPEN
+19:03:15.242 [pool-1-thread-7] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x97ff59a0] OPEN
+19:03:15.242 [pool-1-thread-14] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xb08ff3dd] OPEN
+19:03:15.242 [pool-1-thread-13] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5b88255e] OPEN
+19:03:15.242 [pool-1-thread-3] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xf6f42fa5] OPEN
+19:03:15.242 [pool-1-thread-11] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xddff8056] OPEN
+19:03:15.242 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xafcb7af6] OPEN
+19:03:15.242 [pool-1-thread-6] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x95d842ae] OPEN
+19:03:15.242 [pool-1-thread-9] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x2075bbfa] OPEN
+19:03:15.242 [pool-1-thread-12] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x3ef148b2] OPEN
+19:03:15.242 [pool-1-thread-2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xc0add00c] OPEN
+19:03:15.242 [pool-1-thread-16] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x63fc8bda] OPEN
+19:03:15.242 [pool-1-thread-5] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xae5873b5] OPEN
+19:03:15.242 [pool-1-thread-4] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x07480c2b] OPEN
+19:03:15.242 [pool-1-thread-8] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x22b2ba9a] OPEN
+19:03:15.258 [New I/O  worker #4] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xc0add00c, /172.31.28.4:46968 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46968
+19:03:15.258 [New I/O  worker #9] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x22b2ba9a, /172.31.28.4:46972 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46972
+19:03:15.258 [New I/O  worker #13] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xf6f42fa5, /172.31.28.4:46984 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46984
+19:03:15.258 [New I/O  worker #15] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5b88255e, /172.31.28.4:46956 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46956
+19:03:15.258 [New I/O  worker #9] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x22b2ba9a, /172.31.28.4:46972 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.258 [New I/O  worker #15] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5b88255e, /172.31.28.4:46956 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.259 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xafcb7af6, /172.31.28.4:46986 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46986
+19:03:15.259 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xafcb7af6, /172.31.28.4:46986 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.259 [New I/O  worker #6] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x95d842ae, /172.31.28.4:46980 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46980
+19:03:15.259 [New I/O  worker #6] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x95d842ae, /172.31.28.4:46980 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.258 [New I/O  worker #14] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x786147b8, /172.31.28.4:46976 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46976
+19:03:15.260 [New I/O  worker #4] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xc0add00c, /172.31.28.4:46968 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.260 [New I/O  worker #16] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x97ff59a0, /172.31.28.4:46970 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46970
+19:03:15.260 [New I/O  worker #16] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x97ff59a0, /172.31.28.4:46970 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.260 [New I/O  worker #10] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x9b713f62, /172.31.28.4:46978 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46978
+19:03:15.260 [New I/O  worker #10] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x9b713f62, /172.31.28.4:46978 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.260 [New I/O  worker #3] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x63fc8bda, /172.31.28.4:46990 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46990
+19:03:15.261 [New I/O  worker #3] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x63fc8bda, /172.31.28.4:46990 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.258 [New I/O  worker #11] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x07480c2b, /172.31.28.4:46992 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46992
+19:03:15.261 [New I/O  worker #14] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x786147b8, /172.31.28.4:46976 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.258 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xae5873b5, /172.31.28.4:46982 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46982
+19:03:15.258 [New I/O  worker #13] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xf6f42fa5, /172.31.28.4:46984 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.261 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xae5873b5, /172.31.28.4:46982 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.261 [New I/O  worker #8] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x3ef148b2, /172.31.28.4:46958 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46958
+19:03:15.259 [New I/O  worker #7] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xddff8056, /172.31.28.4:46974 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46974
+19:03:15.261 [New I/O  worker #8] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x3ef148b2, /172.31.28.4:46958 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.261 [New I/O  worker #5] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x2075bbfa, /172.31.28.4:46988 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46988
+19:03:15.261 [New I/O  worker #7] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xddff8056, /172.31.28.4:46974 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.261 [New I/O  worker #5] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x2075bbfa, /172.31.28.4:46988 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.261 [New I/O  worker #12] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xb08ff3dd, /172.31.28.4:46960 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:46960
+19:03:15.261 [New I/O  worker #12] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xb08ff3dd, /172.31.28.4:46960 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:03:15.261 [New I/O  worker #11] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x07480c2b, /172.31.28.4:46992 => ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+[RunId=8762778988557049821] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=6119912120252689655] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=8820554074210489256] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=2846953087385228544] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=-8295409605924897178] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=-8262349616580385825] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=8822258017201479192] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=4778677978975326916] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=-6842983595291682632] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=-7179840446579149656] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=7424452133725277308] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=8641600999712628986] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=1403081034620300410] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=-1518623992830508085] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=-4572709669264164222] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+[RunId=-790459280616145808] Running for 30 minutes against ec2-34-240-33-203.eu-west-1.compute.amazonaws.com
+19:33:15.459 [pool-1-thread-11] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.459 [pool-1-thread-12] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.459 [pool-1-thread-9] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.460 [pool-1-thread-14] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.462 [pool-1-thread-5] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.465 [New I/O  worker #8] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x3ef148b2, /172.31.28.4:46958 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.465 [New I/O  worker #12] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xb08ff3dd, /172.31.28.4:46960 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.465 [New I/O  worker #7] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xddff8056, /172.31.28.4:46974 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.465 [New I/O  worker #5] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x2075bbfa, /172.31.28.4:46988 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.465 [New I/O  worker #12] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xb08ff3dd, /172.31.28.4:46960 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.465 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xae5873b5, /172.31.28.4:46982 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.465 [New I/O  worker #7] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xddff8056, /172.31.28.4:46974 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.467 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xae5873b5, /172.31.28.4:46982 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.465 [New I/O  worker #5] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x2075bbfa, /172.31.28.4:46988 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.467 [New I/O  worker #5] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x2075bbfa, /172.31.28.4:46988 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.467 [New I/O  worker #12] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xb08ff3dd, /172.31.28.4:46960 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.467 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xae5873b5, /172.31.28.4:46982 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.467 [New I/O  worker #5] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.467 [New I/O  worker #8] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x3ef148b2, /172.31.28.4:46958 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.467 [New I/O  worker #12] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.467 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.467 [pool-1-thread-4] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.467 [New I/O  worker #8] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x3ef148b2, /172.31.28.4:46958 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.467 [New I/O  worker #7] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xddff8056, /172.31.28.4:46974 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.467 [New I/O  worker #8] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.467 [New I/O  worker #11] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x07480c2b, /172.31.28.4:46992 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.468 [New I/O  worker #7] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.468 [New I/O  worker #11] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x07480c2b, /172.31.28.4:46992 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.468 [New I/O  worker #11] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x07480c2b, /172.31.28.4:46992 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.468 [New I/O  worker #11] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.470 [pool-1-thread-16] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.471 [New I/O  worker #3] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x63fc8bda, /172.31.28.4:46990 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.471 [New I/O  worker #3] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x63fc8bda, /172.31.28.4:46990 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.471 [pool-1-thread-3] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.471 [New I/O  worker #3] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x63fc8bda, /172.31.28.4:46990 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.472 [New I/O  worker #3] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.473 [pool-1-thread-7] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.475 [pool-1-thread-6] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.476 [New I/O  worker #6] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x95d842ae, /172.31.28.4:46980 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.476 [New I/O  worker #6] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x95d842ae, /172.31.28.4:46980 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.476 [New I/O  worker #6] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x95d842ae, /172.31.28.4:46980 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.476 [New I/O  worker #6] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.478 [New I/O  worker #16] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x97ff59a0, /172.31.28.4:46970 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.478 [New I/O  worker #16] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x97ff59a0, /172.31.28.4:46970 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.478 [New I/O  worker #16] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x97ff59a0, /172.31.28.4:46970 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.478 [New I/O  worker #16] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.479 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.485 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xafcb7af6, /172.31.28.4:46986 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.481 [pool-1-thread-10] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.484 [pool-1-thread-2] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.493 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xafcb7af6, /172.31.28.4:46986 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.493 [pool-1-thread-15] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.493 [pool-1-thread-8] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.493 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xafcb7af6, /172.31.28.4:46986 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.493 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.493 [pool-1-thread-13] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:33:15.493 [New I/O  worker #9] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x22b2ba9a, /172.31.28.4:46972 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.493 [New I/O  worker #4] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xc0add00c, /172.31.28.4:46968 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.493 [New I/O  worker #9] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x22b2ba9a, /172.31.28.4:46972 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.493 [New I/O  worker #4] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xc0add00c, /172.31.28.4:46968 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.494 [New I/O  worker #4] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xc0add00c, /172.31.28.4:46968 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.494 [New I/O  worker #4] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.493 [New I/O  worker #15] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5b88255e, /172.31.28.4:46956 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.494 [New I/O  worker #9] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x22b2ba9a, /172.31.28.4:46972 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.494 [New I/O  worker #15] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5b88255e, /172.31.28.4:46956 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.494 [New I/O  worker #9] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.494 [New I/O  worker #15] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x5b88255e, /172.31.28.4:46956 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.494 [New I/O  worker #15] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.498 [New I/O  worker #10] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x9b713f62, /172.31.28.4:46978 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.498 [New I/O  worker #14] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x786147b8, /172.31.28.4:46976 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.498 [New I/O  worker #10] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x9b713f62, /172.31.28.4:46978 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.498 [New I/O  worker #14] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x786147b8, /172.31.28.4:46976 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.498 [New I/O  worker #10] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x9b713f62, /172.31.28.4:46978 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.498 [New I/O  worker #14] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x786147b8, /172.31.28.4:46976 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.498 [New I/O  worker #10] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.498 [New I/O  worker #14] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:33:15.501 [New I/O  worker #13] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xf6f42fa5, /172.31.28.4:46984 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:33:15.501 [New I/O  worker #13] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xf6f42fa5, /172.31.28.4:46984 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:33:15.501 [New I/O  worker #13] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xf6f42fa5, /172.31.28.4:46984 :> ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:33:15.501 [New I/O  worker #13] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-33-203.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+RunTime: 30 min
+Number of clients: 16
+Total requests: 1042428
+Total records: 104242800
+Total errors: 0
+Total duplicates: 11134850
+Ratio of duplicates: 0.10681648996381525
+Duration: 1800024 ms
+Avg request duration: 27.62798581772554 ms
+Batch size: 100
+Records/sec: 57911.89450807323

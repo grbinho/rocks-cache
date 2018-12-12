@@ -1,6 +1,6 @@
 name := "rocks-cache"
 
-version := "0.5"
+version := "0.8"
 
 scalaVersion := "2.12.7"
 
@@ -11,7 +11,8 @@ libraryDependencies ++= Seq(
   "org.apache.avro" % "avro" % "1.8.2",
   "org.apache.avro" % "avro-ipc" % "1.8.2",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0"
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
+  "software.amazon.awssdk" % "dynamodb" % "2.1.3"
 )
 
 val circeVersion = "0.10.0"

@@ -1,0 +1,33 @@
+18:56:16.501 [pool-1-thread-2] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+18:56:16.501 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+18:56:16.503 [pool-1-thread-2] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+18:56:16.503 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+18:56:16.521 [pool-1-thread-2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x81a9f363] OPEN
+18:56:16.521 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xa7bde9c9] OPEN
+18:56:16.533 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xa7bde9c9, /172.31.28.4:60256 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:60256
+18:56:16.533 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x81a9f363, /172.31.28.4:60254 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:60254
+18:56:16.533 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xa7bde9c9, /172.31.28.4:60256 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+18:56:16.533 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x81a9f363, /172.31.28.4:60254 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+[RunId=7873819938173620424] Running for 30 minutes against ec2-34-240-194-179.eu-west-1.compute.amazonaws.com
+[RunId=-8551770111206217709] Running for 30 minutes against ec2-34-240-194-179.eu-west-1.compute.amazonaws.com
+19:26:16.718 [pool-1-thread-2] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:26:16.718 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Disconnecting from ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+19:26:16.721 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xa7bde9c9, /172.31.28.4:60256 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:26:16.721 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x81a9f363, /172.31.28.4:60254 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] DISCONNECTED
+19:26:16.721 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xa7bde9c9, /172.31.28.4:60256 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:26:16.721 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x81a9f363, /172.31.28.4:60254 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] UNBOUND
+19:26:16.721 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0xa7bde9c9, /172.31.28.4:60256 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:26:16.721 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x81a9f363, /172.31.28.4:60254 :> ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CLOSED
+19:26:16.721 [New I/O  worker #2] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+19:26:16.721 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - Remote peer ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111 closed connection.
+RunTime: 30 min
+Number of clients: 2
+Total requests: 13594808
+Total records: 13594808
+Total errors: 0
+Total duplicates: 0
+Ratio of duplicates: 0.0
+Duration: 1799999 ms
+Avg request duration: 0.26480682919538107 ms
+Batch size: 1
+Records/sec: 7552.675307041837

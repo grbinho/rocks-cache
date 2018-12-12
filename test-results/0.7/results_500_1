@@ -1,0 +1,6 @@
+08:05:21.004 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Using Netty bootstrap options: {connectTimeoutMillis=60000, tcpNoDelay=true, keepAlive=true}
+08:05:21.005 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - Connecting to ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+08:05:21.022 [pool-1-thread-1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x78eaa15d] OPEN
+08:05:21.033 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x78eaa15d, /172.31.28.4:60656 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] BOUND: /172.31.28.4:60656
+08:05:21.033 [New I/O  worker #1] DEBUG org.apache.avro.ipc.NettyTransceiver - [id: 0x78eaa15d, /172.31.28.4:60656 => ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111] CONNECTED: ec2-34-240-194-179.eu-west-1.compute.amazonaws.com/172.31.31.157:65111
+[RunId=-94337386125489711] Running for 30 minutes against ec2-34-240-194-179.eu-west-1.compute.amazonaws.com
