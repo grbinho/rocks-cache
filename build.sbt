@@ -12,7 +12,9 @@ libraryDependencies ++= Seq(
   "org.apache.avro" % "avro-ipc" % "1.8.2",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
-  "software.amazon.awssdk" % "dynamodb" % "2.1.3"
+  "software.amazon.awssdk" % "dynamodb" % "2.1.3",
+  "com.github.finagle" %% "finchx-core" % "0.26.0",
+  "com.github.finagle" %% "finchx-circe" % "0.26.0"
 )
 
 val circeVersion = "0.10.0"
