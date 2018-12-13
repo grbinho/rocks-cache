@@ -1,6 +1,6 @@
 name := "rocks-cache"
 
-version := "0.8"
+version := "0.10"
 
 scalaVersion := "2.12.7"
 
@@ -14,7 +14,9 @@ libraryDependencies ++= Seq(
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
   "software.amazon.awssdk" % "dynamodb" % "2.1.3",
   "com.github.finagle" %% "finchx-core" % "0.26.0",
-  "com.github.finagle" %% "finchx-circe" % "0.26.0"
+  "com.github.finagle" %% "finchx-circe" % "0.26.0",
+  "org.postgresql" % "postgresql" % "42.2.5",
+  "com.zaxxer" % "HikariCP" % "3.1.0"
 )
 
 val circeVersion = "0.10.0"
