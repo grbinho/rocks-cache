@@ -1,0 +1,37 @@
+package org.rockscache.statistics
+
+import HistogramData
+
+case class DbStatistics(dbWrite: HistogramData,
+                        dbGet: HistogramData,
+                        dbMultiGet: HistogramData,
+                        dbSeek: HistogramData,
+                        bytesCompressed: HistogramData,
+                        bytesDecompressed: HistogramData,
+                        bytesPerWrite: HistogramData,
+                        bytesPerRead: HistogramData,
+                        bytesPerMultiGet: HistogramData,
+                        compactionOutFileSyncMicros: HistogramData,
+                        compactionTime: HistogramData,
+                        numFilesInSingleCompaction: HistogramData,
+                        compressionTimesNanos: HistogramData,
+                        decompressionTimesNanos: HistogramData,
+                        hardRateLimitDelayCount: HistogramData,
+                        manifestFileSyncMicros: HistogramData,
+                        numSubcompactionsScheduled: HistogramData,
+                        histogramEnumMax: HistogramData,
+                        readBlockCompactionMicros: HistogramData,
+                        readBlockGetMicros: HistogramData,
+                        readNumMergeOperands: HistogramData,
+                        softRateLimitDelayCount: HistogramData,
+                        sstReadMicros: HistogramData,
+                        stallL0NumFilesCount: HistogramData,
+                        stallL0SlowdownCount: HistogramData,
+                        stallMemtableCompactionCount: HistogramData,
+                        subcompactionSetupTime: HistogramData,
+                        tableOpenIOMicros: HistogramData,
+                        tableSyncMicros: HistogramData,
+                        walFileSyncMicros: HistogramData,
+                        writeRawBlockMicros: HistogramData,
+                        writeStall: HistogramData
+                       )
