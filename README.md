@@ -1,5 +1,5 @@
 # rocks-cache
-Durable Ephemeral cache
+Experimental implementation of durable ephemeral cache
 
 Cache service backed by rocksdb.
 
